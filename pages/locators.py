@@ -10,3 +10,7 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     ADD_TO_CARD = (By.CSS_SELECTOR, "button.btn-lg.btn-primary.btn-add-to-basket")
+    ITEM_THAT_YOU_WANNA_ADD = (By.CSS_SELECTOR, "div.col-sm-6.product_main h1")
+    ITEM_THAT_WAS_ADDED = (By.CSS_SELECTOR, "div.alertinner strong")
+    YOUR_ITEM_VALUE = (By.CSS_SELECTOR, "p.price_color")
+    YOUR_BASKET_VALUE = (By.CSS_SELECTOR, "div.alertinner p strong")

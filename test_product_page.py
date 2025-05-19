@@ -7,3 +7,5 @@ def test_add_to_card(browser):
     page.should_be_promo()
     page.add_to_card()
     page.solve_quiz_and_get_code()
+    page.book_is_added()
+    page.basket_value()

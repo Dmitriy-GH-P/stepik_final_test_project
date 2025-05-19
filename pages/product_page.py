@@ -27,3 +27,15 @@ class ProductPage(BasePage):
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def book_is_added(self):
+        your_item_name = self.browser.find_element(*ProductPageLocators.ITEM_THAT_YOU_WANNA_ADD).text
+        added_item = self.browser.find_element(*ProductPageLocators.ITEM_THAT_WAS_ADDED).text
+        assert your_item_name == added_item, "Your item not added"
+        print(f'{added_item} has been added to your basket.')
+
+    def basket_value(self):
+        basket_value = self.browser.find_element(*ProductPageLocators.YOUR_BASKET_VALUE).text
+        your_item_value = self.browser.find_element(*ProductPageLocators.YOUR_ITEM_VALUE).text
+        assert  basket_value == your_item_value
+        print(f'Your basket value is {basket_value}')
