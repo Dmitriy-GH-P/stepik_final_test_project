@@ -30,9 +30,9 @@ class ProductPage(BasePage):
 
     def book_is_added(self):
         your_item_name = self.browser.find_element(*ProductPageLocators.ITEM_THAT_YOU_WANNA_ADD).text
-        added_item = self.browser.find_element(*ProductPageLocators.ITEM_THAT_WAS_ADDED).text
-        assert your_item_name == added_item, "Your item not added"
-        print(f'{added_item} has been added to your basket.')
+        success_message = self.browser.find_element(*ProductPageLocators.SUCCESS_MESSAGE).text
+        assert your_item_name in success_message, "Your item not added"
+        print(success_message)
 
     def basket_value(self):
         basket_value = self.browser.find_element(*ProductPageLocators.YOUR_BASKET_VALUE).text
