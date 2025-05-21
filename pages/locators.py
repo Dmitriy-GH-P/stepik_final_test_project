@@ -18,3 +18,8 @@ class ProductPageLocators():
     ITEM_THAT_WAS_ADDED = (By.CSS_SELECTOR, "div.alertinner strong")
     YOUR_ITEM_VALUE = (By.CSS_SELECTOR, "p.price_color")
     YOUR_BASKET_VALUE = (By.CSS_SELECTOR, "div.alertinner p strong")
+
+class BasketPageLocators():
+    BASKET_BUTTON = (By.CSS_SELECTOR, "span a.btn.btn-default")
+    BASKET_TEXT = (By.CSS_SELECTOR, "div#content_inner p")
+    ITEMS_TO_BUY = (By.CSS_SELECTOR, "form#basket_formset.basket_summary")
