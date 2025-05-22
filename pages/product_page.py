@@ -9,9 +9,9 @@ class ProductPage(BasePage):
         current_url = self.browser.current_url
         assert "?promo=newYear" in current_url, "Not a promo"
 
-    def add_to_card(self):
-        add_to_card_button = self.browser.find_element(*ProductPageLocators.ADD_TO_CARD)
-        add_to_card_button.click()
+    def add_to_basket(self):
+        add_to_basket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_CARD)
+        add_to_basket_button.click()
 
 
     def solve_quiz_and_get_code(self):
