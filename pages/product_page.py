@@ -5,12 +5,8 @@ import math
 
 class ProductPage(BasePage):
 
-    def should_be_promo(self):
-        current_url = self.browser.current_url
-        assert "?promo=newYear" in current_url, "Not a promo"
-
     def add_to_basket(self):
-        add_to_basket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_CARD)
+        add_to_basket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
         add_to_basket_button.click()
 
 

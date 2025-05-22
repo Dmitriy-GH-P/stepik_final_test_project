@@ -17,7 +17,7 @@ class LoginPageLocators():
     REGISTER_BUTTON = (By.CSS_SELECTOR, "#register_form > button")
 
 class ProductPageLocators():
-    ADD_TO_CARD = (By.CSS_SELECTOR, "button.btn-lg.btn-primary.btn-add-to-basket")
+    ADD_TO_BASKET = (By.CSS_SELECTOR, "button.btn-lg.btn-primary.btn-add-to-basket")
     ITEM_THAT_YOU_WANNA_ADD = (By.CSS_SELECTOR, "div.col-sm-6.product_main h1")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "div.alert.alert-safe.alert-noicon.alert-success.fade.in")
     ITEM_THAT_WAS_ADDED = (By.CSS_SELECTOR, "div.alertinner strong")
